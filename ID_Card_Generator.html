@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ID Card Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Create ID Card</h2>
+    
+    <label for="photo">Photo:</label>
+    <input type="file" id="photo" accept="image/*">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+
+    <label for="department">Department:</label>
+    <input type="text" id="department">
+
+    <label for="matric">Matric:</label>
+    <input type="text" id="matric">
+
+    <label for="skills">Skills:</label>
+    <input type="text" id="skills">
+
+    <button type="button" onclick="updateIDCard()">Generate</button>
+    <button type="button" onclick="downloadIDCard()">Download as Image</button>
+    <button type="button" onclick="printIDCard()">Print ID Card</button>
+  </div>
+
+  <div class="id-card" id="id-card">
+    <h2>U-Inspire Web Development</h2>
+    <div class="photo-placeholder" id="id-photo">
+      <span>Photo</span>
+    </div>
+    <div class="id-info">
+      <p><strong>Name</strong><br><span id="id-name">Your Name</span></p>
+      <p><strong>Email</strong><br><span id="id-email">your@email.com</span></p>
+      <p><strong>Department</strong><br><span id="id-department">Your Department</span></p>
+      <p><strong>Matric</strong><br><span id="id-matric">Your Matric</span></p>
+      <p><strong>Skills</strong><br><span id="id-skills">Javascript</span></p>
+    </div>
+    <button class="hire-button">Hire Me</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
